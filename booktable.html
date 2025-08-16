@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>My Webpage</title>
+<style>
+	body{
+		background-color: black;
+	}
+	.img1{
+        height: 90px;
+        width: 300px;
+        margin-left: 70px;
+        margin-top: -40px;
+    }
+	#login{
+		width: 550px;
+		margin-left: 750px;
+		margin-top: -270px;
+		border: 2px solid white;
+		border-radius: 35px 35px;
+		padding: 15px;
+	}
+	#input{
+		margin-left: 60px;
+		margin-top: 10px;
+		padding: 10px;
+	}
+	input{
+		background-color: white;
+		padding: 5px 10px;
+		border-radius: 8px;
+		border: none;
+		width: 100%;
+		padding: 12px 10px;
+		margin-bottom: 25px;
+		margin-top: 5px;
+	}
+	.div{
+		display: flex;
+		gap: 10px;
+	}
+	.div1{
+		width: 60%;
+		margin-top: 30px;
+	}
+	.btn{
+		border-radius: 8px;
+		border: 1px solid black;
+		background: red;
+		font-weight: bold;
+		padding: 12px;
+		color: white;
+		margin-top: -2px;
+	}
+    .heading{
+		margin-top: 40px;
+        color: white;
+		font-weight: bold;
+    }
+	label{
+		font-weight: bold;
+		color: white;
+	}
+	.h1{
+        color: white;
+        font-weight: bold;
+        font-family: "lucida Handwriting",cursive;
+        font-size: 25;
+        margin-top: 200px;
+        margin-left: 50px;
+    }
+	.img2{
+        height: 300px;
+        width: 500px;
+		margin-top: -350px;
+	}
+	#img3{
+		width: 90px;
+		height: 80px;
+		margin-left: 990px;
+		margin-top: -310px;
+		border: 2px solid white;
+		border-radius: 50%;
+	}
+</style>
+</head>
+<body>	
+     {% include "homenav.html" %}	
+	 <img src="/static/logo.jpg" class="img1">
+	 <h1 class="h1">FINGER LINKING VEG THALI..!</h1>
+	 <img src="/static/BT.jpg" id="img3">
+	<form id="login" action="" method="post">
+		{%csrf_token%}
+		<center><h1 class="heading">BOOK-TABLE</h1></center>
+		</center>
+		<div class="div">
+			<div class="div1">
+				<label>First Name</label>
+				<br>
+				<input type="text" name="fname" placeholder="Enter your first name" required>
+			</div>
+			<div class="div1">
+				<label>Last Name</label>
+				<br>
+				<input type="text" name="lname" placeholder="Enter your last name" required>
+			</div>
+		</div>
+		<label>Email</label><br>
+		<input type="email" name="email"  placeholder="Enter your email" required><br>
+
+		<label>Phone Number</label><br>
+		<input type="number" name="phone"  placeholder="Enter your phone" required><br>
+
+		<label>Date</label><br>
+		<input type="date" name="date" placeholder="Enter Your date" required><br>
+
+		<label>Time</label><br>
+		<input type="time" name="time" placeholder="Enter Your time" required><br>
+
+		<input class="btn" value="Create Account" type="submit">
+	</form>
+	 <img src="/static/thali.jpg" class="img2">
+	 <div class="div">
+	 {% include "footer.html"%}
+	 </div>
+</body>
+</html>

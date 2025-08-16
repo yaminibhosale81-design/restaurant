@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+         .img2{
+            height: 100px;
+            width: 300px;
+            margin-left: 70px;
+            margin-top: -80px;
+        }
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: "lucida Handwriting",cursive;
+             margin-top: -50px;
+        }
+        .contact {
+            display: flex;
+            justify-content: space-around;
+            margin-top: -40px;
+        }
+        .contact div {
+            margin: 20px;
+        }
+        .contact i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact strong {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+        .img2{
+            height: 100px;
+            width: 300px;
+            margin-left: 70px;
+            margin-top: -70px;
+        }
+    </style>
+</head>
+<body>
+    {% include "homenav.html" %}
+    <img src="/static/logo.jpg" class="img2">
+<div class="container">
+    <h2 class="h2">CONTACTS</h2>
+    <div class="contact">
+        <div>
+            <i class="location"></i>
+            <strong>LOCATION</strong><br>
+             Yashodhan, 38, opposite Northen Hospital, Shahunagar, Jalgaon, Maharashtra 425001
+        </div>
+        <div>
+            <i class="phone"></i>
+            <strong>PHONE</strong><br>
+            800 478 42 51
+        </div>
+        <div>
+            <i class="email"></i>
+            <strong>EMAIL</strong><br>
+            info@khandeshkatta.com
+        </div>
+    </div>
+    <div style="margin-top: 40px;">
+      <iframe 
+  src="https://www.google.com/maps?q=Yashodhan,38,Opposite+Northen+Hospital,Shahunagar,Jalgoan,Maharashtra+425001&output=embed"></iframe>
+    </div>
+</div>
+</body>
+</html>

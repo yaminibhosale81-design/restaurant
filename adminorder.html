@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Orders - Scarlet</title>
+<style>
+    body { 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        background-color: #1e1e1e; 
+        color: #fff; }
+    .sidebar { 
+        position: fixed; 
+        left: 0; top: 0; 
+        width: 220px; 
+        height: 100%; 
+        background-color: #2c2c2c; 
+        padding-top: 20px; }
+    .sidebar h2 { 
+        color: #f0a500; 
+        text-align: center; 
+        font-size: 24px; 
+        margin-bottom: 30px; }
+    .sidebar a { 
+        display: block; 
+        padding: 12px 20px; 
+        color: #bbb; 
+        text-decoration: none; 
+        transition: 0.3s; }
+    .sidebar a:hover, .sidebar a.active { 
+        background-color: #f0a500; 
+        color: #1e1e1e; }    
+    .main { 
+        margin-left: 220px; 
+        padding: 20px; }
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        margin-top: 20px; }
+    table, th, td { 
+        border: 1px solid #444; }
+    th, td { 
+        padding: 12px; 
+        text-align: left; }
+    th { 
+        background-color: #333; }
+</style>
+</head>
+<body>
+<div class="sidebar">
+    <h2>Admin</h2>
+    <a href="/admin">Dashboard</a>
+    <a href="/adminorder">Orders</a>
+    <a href="/adminmenu">Menu Dishes</a>
+    <a href="/admincustomer">Customers</a>
+    <a href="/adminsetting">Settings</a>
+</div>
+<div class="main">
+    <h1>Orders</h1>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>#001</td>
+            <td>Aashu Patil</td>
+            <td>French Fries</td>
+            <td>1</td>
+            <td>₹90</td>
+            <td style="color:lime;">Completed</td>
+        </tr>
+        <tr>
+            <td>#002</td>
+            <td>Tejal Bhole</td>
+            <td>Coffee</td>
+            <td>1</td>
+            <td>₹25</td>
+            <td style="color:lime;">Completed</td>
+        </tr>
+        <tr>
+            <td>#003</td>
+            <td>Yamini Bhosale</td>
+            <td>Burger</td>
+            <td>1</td>
+            <td>₹100</td>
+            <td style="color:orange;">Pending</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

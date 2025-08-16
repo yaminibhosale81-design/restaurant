@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>My Home Page</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .img2{
+            height: 100px;
+            width: 300px;
+            margin-top: -90px;
+        }
+        .img1{
+            margin-left: 50px;
+            margin-top: -40px;
+            height: 300px;
+            width: 350px;
+        }
+        .btn{
+		border-radius: 8px;
+		border: 1px solid black;
+        text-decoration: none;
+		background: red;
+		font-weight: bold;
+		padding: 12px;
+		color: white;
+		margin-top: -60px;
+        margin-left: 50px;
+	}
+    .p{
+        color: white;
+        margin-left: 50px;
+        font-size: 30;
+        margin-top: -170px;
+    }
+    .h2{
+        font-size: 30px;
+        color: white;
+        margin-left: 60px;
+        margin-top: 70px;
+    }
+    .img3{
+        width: 500px;
+        height: 500px;
+        margin-left: 900px;
+        margin-top: -360px;
+        border-radius: 10px 10px;
+        border: 2px solid white;
+    }
+    .h1{
+        font-size: 30px;
+        margin-left: 1000px;
+        color: white;
+        margin-top: -10px;
+    } 
+    .h8{
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        margin-top: -10px;
+    }
+    #img1{
+        width: 320px;
+        height: 300px;
+        margin-left: 80px;
+        margin-top: -60px;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+    #img2{
+        width: 320px;
+        height: 300px;
+        margin-left: 10px;
+        margin-top: -40px;
+        border: 2px solid white;
+        border-radius: 5px;
+        }
+    #img3{
+        width: 320px;
+        height: 300px;
+        margin-left: 10px;
+        margin-top: -40px;
+        border: 2px solid white;
+        border-radius: 5px;
+        }
+    #img4{
+        width: 320px;
+        height: 300px;
+        margin-left: 10px;
+        margin-top: -40px;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
+    .h7{
+        color: white;
+        margin-left: 130px;
+        font-size: 30px;
+    }
+    .h3{
+        color: white;
+        margin-left: 490px;
+        font-size: 30px;
+        margin-top: -60px;
+    }
+    .h4{
+        color: white;
+        margin-left: 810px;
+        font-size: 30px;
+        margin-top: -60px;
+    }
+    .h5{
+        color: white;
+        margin-left: 1105px;
+        font-size: 30px;
+        margin-top: -70px;
+    }
+    .h6{
+        color: white;
+        text-align: center;
+        margin-top: -20px;
+        font-size: 30px;
+        font-style: italic;
+    }
+    .div{
+        margin-top: 150px;
+    } 
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 25px;
+      margin-top: 150px;
+    }
+
+    footer a {
+      color: rgb(0, 128, 255);
+      text-decoration: none;
+      margin: 0 10px;
+    } 
+    .div1{
+        margin-top: 150px;
+    }   
+    .h9{
+        color: white;
+        margin-left: 650px;
+        margin-top: -20px;
+    } 
+    .india{
+        height: 200px;
+        width: 350px;
+        margin-left: 190px;
+        border: 2px solid white;
+    }  
+    .rice{
+        height: 200px;
+        width: 350px;
+        margin-left: 5px;
+        border: 2px solid white;
+    }
+    .butter{
+        height: 200px;
+        width: 350px;
+        margin-left: 5px;
+        border: 2px solid white;
+    }
+    .dosa{
+        height: 200px;
+        width: 350px;
+        margin-left: 190px;
+        border: 2px solid white;
+    }
+    .jeera{
+        height: 200px;
+        width: 350px;
+        margin-left: 5px;
+        border: 2px solid white;
+    }
+    .food{
+        height: 200px;
+        width: 350px;
+        margin-left: 5px;
+        border: 2px solid white;
+    }         
+   </style>
+    </head>
+    <body>
+    {% include "homenav.html" %}
+    <img src="/static/logo.jpg" class="img2">
+    <h1 class="h1">---Khandesh Katta---</h1>
+    <h2 class="h2">The Richest Taste Of Indian Flavours...!</h2>
+    <img src="/static/masale.jpg" class="img1">
+    <img src="/static/about.jpg" class="img3">
+    <p class="p">1.Pure vegetarian & Non vegetarian options<br>
+                 2.Hygenic and Family Friendly Environment.<br>
+                 3.Fast Home Delivery Services.<br>
+                 4.Special Weekends and Festival Menus   
+    </p>
+    <a class="btn" href="/table">BOOK A TABLE</a> 
+    <div class="div">
+    <h1 class="h8">Our best chef</h1>
+    <h6 class="h6">THIS ARE THE BEST CHEF IN INDIA</h6>
+    <img src="/static/ranveer.jpg" id="img1">
+    <img src="/static/vikas.jpg" id="img2">
+    <img src="/static/sanjeev.jpg" id="img3">
+    <img src="/static/radhika.jpg" id="img4">
+    <h2 class="h7">Ranveer Brar</h2>
+    <h3 class="h3">Vikas Khanna</h3>
+    <h4 class="h4">Sanjeev Kapoor</h4>
+    <h5 class="h5">Radhika Khandelwal</h5>
+    </div>
+    <div class="div1">
+     <h1 class="h9">GALLERY</h1>
+        <img src="/static/india.jpg" class="india">
+        <img src="/static/rice.jpg" class="rice">
+        <img src="/static/butterchicken.jpg" class="butter">
+        <img src="/static/dosa.png" class="dosa">
+        <img src="/static/Jeera.jpg" class="jeera">
+        <img src="/static/food.jpg" class="food">
+    </div>
+    <footer>
+    &copy; 2025 MyWebsite. All rights reserved. |
+    <a href="/privacy">Privacy Policy</a> |
+    <a href="/contact">Contact Us</a>
+  </footer>
+    </body>
+</html>

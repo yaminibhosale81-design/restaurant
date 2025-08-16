@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>My Booking Page</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .h1{
+            color: green;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 40px;
+            font-weight: bold;
+            font-family: "lucida Handwriting",cursive;
+        }
+        .p{
+            color: white;
+            text-align: center;
+            font-size: 25px;
+            margin-top: 40px;
+        }
+        .a{
+            margin-left: 650px;
+            font-size: 20px;
+            color: aliceblue;
+            background-color: green;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 18px;
+        }
+        .a:hover{
+            background-color: brown;
+        }
+        .cancel{
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            margin-top: -30px;
+            margin-left: 800px;
+            background: red;
+            color: white;
+            text-decoration: none;
+        }
+        .btn{
+            font-size: 20px;
+            margin-left: 650px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+        }
+        .h2{
+            font-size: 25px;
+            color: red;
+            font-family: cursive;
+            margin-left: 600px;
+            margin-top: 50px;
+        }
+        .label{
+            color: white;
+            margin-left: 610px;
+            font-size: 30px;
+        }
+        .input{
+            margin-left: 770px;
+            padding: 5px;
+            margin-top: -29px;
+        }    
+    </style>
+    </head>
+    <body>
+    <h1 class="h1">Table Booked Successfully..!</h1>
+    <p class=p>Thank you for your reservation.We look forward to serving you!</p>
+    <a href="/" class="a">Back to Home</a>
+    <script>
+        function show(){
+            alert("Your Table Is Cancelled..!");
+        }
+    </script>
+    <h2 class="h2">-Cancel Table Booking-</h2>
+        <form method="POST">
+            {% csrf_token %}
+        <label class="label">First Name:</label><br>
+        <input class="input" type="text" name="fname" required><br><br>
+
+        <label class="label">Last name:</label><br>
+        <input class="input" type="text" name="lname" required><br><br>
+
+        <label class="label">Email:</label><br>
+        <input class="input" type="text" name="email" required><br><br>
+
+        <label class="label">Phone no:</label><br>
+        <input class="input" type="text" name="phone" required><br><br>
+
+        <label class="label">Date:</label><br>
+        <input class="input" type="text" name="date" required><br><br>
+
+        <label class="label">Time:</label><br>
+        <input class="input" type="text" name="time" required><br><br>
+        <button type="submit" class="btn" onclick="show()" name="cancel">Cancel-Booking</button>
+        </form>
+    </body>
+</html>

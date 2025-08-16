@@ -1,0 +1,145 @@
+<html>
+<head>
+	<title>My Webpage</title>
+<style>
+	body{
+		background-color: black;
+	}
+	#login{
+		width: 500px;
+		height: 490px;
+		margin-left: 800px;
+		margin-top: -100px;
+		border: 2px solid white;
+        border-radius: 15px 15px;
+		padding: 15px;
+	}
+	#input{
+		margin-left: 60px;
+		margin-top: 10px;
+		padding: 10px;
+	}
+	.form{
+		display: flex;
+		gap: 10px;
+	}
+	input{
+		background-color: white;
+		padding: 5px 10px;
+		border-radius: 8px;
+		border: none;
+		width: 100%;
+		padding: 12px 10px;
+		margin-bottom: 15;
+		margin-top: 5px;
+	}
+	.form-item{
+		width: 50%;
+		margin-top: -15px;
+	}
+	.btn{
+		border-radius: 8px;
+		border: 1px solid black;
+		background: red;
+		font-weight: bold;
+		padding: 12px;
+		color: white;
+		margin-top: 20px;
+	}
+	.header{
+		margin-bottom: 40px;
+	}
+    .heading{
+        color: white;
+		margin-top: 70px;
+    }
+	label{
+		font-weight: bold;
+		color: white;
+	}
+	.img1{
+            height: 90px;
+            width: 300px;
+            margin-left: 70px;
+            margin-top: -80px;
+     }
+     .img2{
+        height: 400px;
+        width: 450px;
+		margin-left: 60px;
+		margin-top: -450px;
+		border-radius: 15px;
+	}
+	.payment{
+		padding: 10px;
+		border-radius: 15px 15px;
+	}
+	.h2{
+		font-size: 35px;
+		color: white;
+		margin-left: 160px;
+		margin-top: 50px;
+		
+	}
+	.h3{
+		font-size: 30px;
+		color: white;
+		margin-left: 50px;
+		margin-top: -10px;
+		
+	}
+	#img3{
+		width: 90px;
+		height: 90px;
+		margin-left: 1020px;
+		margin-top: -140px;
+		border: 2px solid orangered;
+		border-radius: 70px 70px;
+	}
+</style>
+</head>
+<body>	
+     {% include "homenav.html" %}	
+	 <img src="/static/logo.jpg" class="img1">
+     <h2 class="h2">Special dishes</h2>
+	 <h2 class="h3">This is a special dishes our restaurent</h2>
+	 <img src="/static/oo.jpg" id="img3">
+	<form id="login" action="" method="post">
+        {%csrf_token%}
+		<center>
+			<div class="header">
+				<h1 class="heading">ONLINE-ORDER</h1>
+			</div>
+		</center>
+		<div class="form">
+			<div class="form-item">
+				<label>First Name:</label>
+				<br>
+				<input type="text" name="fname" placeholder="Enter your first name" required>
+			</div>
+			<div class="form-item">
+				<label>Last Name:</label>
+				<br>
+				<input type="text" name="lname" placeholder="Enter your last name" required>
+			</div>
+		</div>
+		<label>Address:</label><br>
+		<input type="address" name="address" placeholder="Enter your address" required><br>
+
+		<label>Phone Number:</label><br>
+		<input type="number" name="phone" placeholder="Enter your phone" required><br>
+
+		<center>
+		<select class="Payment" name="payment" required>
+			<option>Select Payment Method</option>
+			<option value="cash">Cash-On-Delivery</option>
+			<option value="online">Online-Payment</option>
+		</select>
+		</center>
+		<input class="btn" value="Confirmed-Order" type="submit">
+		
+	</form>
+	<img src="/static/dish1.jpg" class="img2">
+	{% include "footer.html"%}
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            background-color: #222;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+            border: 3px solid white;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 4px;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="date"] {
+            padding: 4px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .buttons input {
+            width: 80px;
+            padding: 6px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons input[type="submit"] {
+            background-color: green;
+            color: white;
+        }
+        .buttons input[type="reset"] {
+            background-color: red;
+            color: white;
+        }
+        #img1{
+		width: 80px;
+		height: 80px;
+		margin-left: 150px;
+		margin-top: -45px;
+		border: 2px solid black;
+		border-radius: 50%;
+        }
+        .img2{
+        height: 100px;
+        width: 300px;
+        margin-top: -90px;
+    }
+    </style>
+</head>
+<body>
+{% include "homenav.html" %}
+<img src="/static/logo.jpg" class="img2">
+<h2>User Registration</h2>
+
+<form method="post" action="#">
+    {%csrf_token%}
+    <img src="/static/user.jpg" id="img1">
+    <label>Id:</label>
+    <input type="text" name="id" required >
+
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Mobile:</label>
+    <input type="text" name="mobile" required>
+
+    <label>User:</label>
+    <input type="text" name="username" required>
+
+    <label>Password:</label>
+    <input type="password" name="password" required>
+
+    <div class="buttons">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+</form>
+{% include "footer.html"%}
+</body>
+</html>

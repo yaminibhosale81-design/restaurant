@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Cancel Order</title>
+<style>
+    body{
+        background-color: black;
+    }
+    .h1{
+        font-size: 30px;
+        color: green;
+        margin-top: 30px;
+        font-weight: bold;
+        font-family: "lucida Handwriting",cursive;
+    }
+    .h3{
+        margin-top: 50px;
+        font-size: 30px;
+        font-family: cursive;
+        color: red;
+    }
+    .input{
+        margin-left: 750px;
+        padding: 5px;
+        margin-top: -25px;
+    }
+    .btn{
+        margin-left: 700px;
+        padding: 15px;
+        background-color: red;
+        color: white;
+        border-radius: 15px 15px;
+    }
+    .label{
+        color: white;
+        margin-left: 610px;
+        font-size: 20px;
+    }
+    .h2{
+        font-size: 25px;
+        color: white;
+        margin-top: -10px;
+     }
+    .img{
+        height: 250px;
+        width: 300px;
+        margin-left: 600px;
+        margin-top: -10px;
+        border-radius: 40px;
+    }    
+    .a{
+        margin-left: 700px;
+        margin-top: 40px;
+        color: aliceblue;
+        background-color: rgb(209, 28, 64);
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .a:hover{
+            background-color: green;
+    }
+</style>
+</head>
+<body>
+    <h1 class="h1" align="center">ORDER CONFIRM</h1>
+    <h2 class="h2" align="center">Thank You For Your Order!!!</h2>
+    <img src="/static/girl.jpg" class="img"> 
+    <a href="/" class="a">Back to Home</a>
+    <script>
+        function show(){
+            alert("Your Order Is Cancelled..!");
+        }
+        </script>
+    <h1 class="h3" align="center">ORDER CANCEL</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label class="label">Phone Number:</label><br>
+        <input class="input" type="text" name="phone" required><br><br>
+        <button type="submit" class="btn" onclick="show()" name="cancel">Cancel-Order</button>
+    </form>
+</body>
+</html>

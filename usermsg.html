@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background-color: #1c1c1c;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 14px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .sidebar a:hover {
+            background-color: #e63900;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        h1 {
+            border-bottom: 2px solid #e63900;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #e63900;
+        }
+        tr:nth-child(even) {
+            background-color: #1f1f1f;
+        }
+        tr:nth-child(odd) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/admin">Dashboard</a>
+        <a href="/userorder">Orders</a>
+        <a href="/messages">Messages</a>
+        <a href="/task">Tasks</a>
+        <a href="/">Logout</a>
+    </div>
+
+    <div class="content">
+        <h1>Messages</h1>
+        <table>
+            <tr>
+                <th>Message ID</th>
+                <th>Sender</th>
+                <th>Subject</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>#101</td>
+                <td>Tejal Bhole</td>
+                <td>Order Query</td>
+                <td>2025-08-14</td>
+            </tr>
+            <tr>
+                <td>#102</td>
+                <td>Aashu Patil</td>
+                <td>Feedback</td>
+                <td>2025-08-13</td>
+            </tr>
+            <tr>
+                <td>#103</td>
+                <td>Yamini Bhosale</td>
+                <td>Delivery Issue</td>
+                <td>2025-08-12</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

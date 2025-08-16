@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>My About Page</title>
+    <style>
+        Body{
+            background-color: black;
+        }
+        .img2{
+            height: 90px;
+            width: 300px;
+            margin-left: 70px;
+            margin-top: -80px;
+        }
+        .p{
+            color: white;
+            margin-left: 500px;
+            font-display: white;
+            font-size: 25;
+            text-align: center;
+            margin-top: 50px;
+            
+        }
+        .img1{
+            width: 500px;
+            height: 600px;
+            margin-left: 40px;
+            margin-top: -550px;
+        }
+        .h2{
+            margin-left: 500px;
+            text-align: center;
+            color: lightgreen;
+            margin-top: 20px;
+        }
+        .h1{
+            margin-left: 500px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+        .h3{
+            margin-left: 500px;
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+    </head>
+    <body>
+        {% include "homenav.html" %}
+        <img src="/static/logo.jpg" class="img2">
+    <h1 class="h1">GOOD FOOD FOR YOUR ALL DAY GOOD MOOD</h1>
+    <h1 class="h3">Welcome to our restaurant!</h1>
+    <p class="p">
+        We are a family-friendly place where you can enjoy fresh, tasty, and healthy food.<br> 
+        Our chefs use the best ingredients to cook delicious meals for you and your family.<br>
+        We serve a variety of dishes, including Indian, Chinese, and Continental food.<br>
+        Whether you want a light snack or a full meal, we have something for everyone.<br>
+        Our goal is to give you great food, fast service, and a comfortable place.<br>
+        We care about our customers and always try to make you feel at home.<br><br>
+        We serve fresh, delicious food made with love and care.<br>
+        Our goal is to give you a great dining experience with friendly service.<br>
+        Whether you're here for a quick bite or a family meal, we have something for everyone.<br>
+        Thank you for choosing us — we look forward to serving you!<br>
+    </p>
+    <h2 class="h2">Thank you for choosing our restaurant. We hope to see you again soon!</h2>
+    <img src="/static/about.jpg" class="img1">
+
+    {% include "footer.html"%}
+</body>
+</html>

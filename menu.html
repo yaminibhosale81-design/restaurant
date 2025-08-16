@@ -1,0 +1,198 @@
+<html>
+<head>
+	<title>My Webpage</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .img2{
+            height: 100px;
+            width: 300px;
+            margin-left: 70px;
+            margin-top: -80px;
+            position:static;
+        }
+        .h1{
+            color: white;
+            font-weight: bold;
+            font-family: "lucida Handwriting",cursive;
+            font-size: 25;
+            text-align: center;
+            margin-left: 50px;
+            margin-top: -20px;
+        }
+        .all{
+            height: 40px;
+            width: 60px;
+            background-color: orange;
+            color: black;
+            margin-bottom: 100px;
+            margin-left: 70px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border: 1px solid white;
+            list-style: none;
+            padding: 10px;
+            text-decoration: none;
+        }
+         .all:hover{
+            background-color: black;
+            color:orange
+        }
+        .startup{
+            height: 40px;
+            width: 120px;
+            background-color: orange;
+            color: black;
+            margin-top: 50px;
+            margin-left: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border: 1px solid white;
+            list-style: none;
+            padding: 12px;
+            text-decoration: none;
+        }
+        .startup:hover{
+            background-color: black;
+            color:orange
+        }
+        .maincourse{
+            height: 40px;
+            width: 120px;
+            background-color: orange;
+            color: black;
+            margin-top: 50px;
+            margin-left: 60px;
+           font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border: 1px solid white;
+            list-style: none;
+            padding: 12px;
+            text-decoration: none;
+        }
+        .maincourse:hover{
+            background-color: black;
+            color:orange
+        }
+        .breads{
+            height: 40px;
+            width: 120px;
+            background-color: orange;
+            color: black;
+            margin-top: 50px;
+            margin-left: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border: 1px solid white;
+            list-style: none;
+            padding: 12px;
+            text-decoration: none;
+        }
+        .breads:hover{
+            background-color: black;
+            color:orange
+        }
+        .rice{
+            height: 40px;
+            width: 120px;
+            background-color: orange;
+            color: black;
+            margin-top: 50px;
+            margin-left: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border: 1px solid white;
+            list-style: none;
+            padding: 12px;
+            text-decoration: none;
+        }
+        .rice:hover{
+            background-color: black;
+            color:orange
+        }
+        .deserts{
+            height: 40px;
+            width: 120px;
+            background-color: orange;
+            color: black;
+            margin-top: 50px;
+            margin-left: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border:1px solid white;
+            list-style: none;
+            padding: 12px;
+            text-decoration: none;
+        }
+        .deserts:hover{
+            background-color: black;
+            color:orange
+        }
+        .drinks{
+            height: 40px;
+            width: 120px;
+            background-color: orange;
+            color: black;
+            margin-top: 50px;
+            margin-left: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border: 1px solid white;
+            list-style: none;
+            padding: 12px;
+            text-decoration: none;
+        }
+        .drinks:hover{
+            background-color: black;
+            color:orange
+        }    
+        .btn{
+            height: 40px;
+            width: 120px;
+            background-color: red;
+            color: white;
+            margin-top: 50px;
+            margin-left: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+		    border: 1px solid white;
+            list-style: none;
+            padding: 12px;
+            text-decoration: none;
+        }
+	    .btn:hover{
+            background-color: red;
+            color: white;
+        }
+    </style>
+    </head>
+    <body>
+    {% include "homenav.html" %}
+    <img src="/static/logo.jpg" class="img2">
+    <h1 class="h1">OUR MENUS</h1><br>
+    <a class="all" href="/all">ALL</a>
+    <a class="startup" href="/startup">STARTUP</a>
+    <a class="maincourse" href="/maincourse">MAINCOURSE</a>
+    <a class="breads" href="/bread">BREADS</a>
+    <a class="rice" href="/rice">RICE</a>
+    <a class="deserts" href="/deserts">DESERTS</a>
+    <a class="drinks" href="/drinks">DRINKS</a>
+    <a class="btn" href="/order">ONLINE-ORDER</a>
+    <ul>
+  {% for item in items %}
+    <li>{{ item.name }} - ₹{{ item.price }}
+      <a href="{% url 'add_to_cart' item.id %}">Add to Cart</a>
+    </li>
+  {% endfor %}
+</ul>
+</body>
+</html>	

@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>My Web Page</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black; 
+            color: white;
+        }        
+        #nav {
+            height: 80px;
+            opacity: 0.8;
+            background-color: transparent; 
+            padding: 10px 40px;
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+        }
+
+        #nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav ul li {
+            display: inline-block;
+            list-style: none;
+            line-height: 40px;
+            font-size: 25px;
+            margin-left: 5px;
+            font-weight: bold;
+
+        }
+
+        #nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 10px;
+        }
+
+        #nav ul li:hover {
+            background-color: red;
+            border-radius: 10px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-btn {
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div id="nav">
+    
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/table">BOOK-TABLE</a></li>
+        <li><a href="/menu">MENU</a></li>
+        <li><a href="/order">ONLINE-ORDER</a></li>
+        <li><a href="/about">ABOUT US</a></li>
+        <li><a href="/contact">CONTACTS</a></li>
+        <li><a href="/register">REGISTER</a></li>
+    </ul>
+    <div class="dropdown">
+        <button onclick="toggleMenu()" class="menu-btn">&#8942;</button>
+        <div id="dropdownMenu" class="dropdown-content">
+            <a href="/admin1">AdminDashboard</a>
+            <a href="/user1">UserDashboard</a>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.menu-btn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove("show");
+        }
+    }
+}
+</script>
+
+</body>
+</html>

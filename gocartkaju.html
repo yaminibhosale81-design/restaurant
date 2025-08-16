@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>
+            My Web Page
+        </title>
+        <script src="jquery.js"></script>
+        <style>
+            body{
+                background-color: black;
+            }
+            #div1{
+                background-color:black;
+                border: 5px solid white;
+                height:500px;
+                width:350px;
+                border-radius: 20px;
+                margin-left: 550px;
+                margin-top: 20px;
+            }
+            #div2{
+                height:40px;
+                width:350px;
+                background-color: white;
+            }
+            #img1{
+                height:40px;
+                width:50px;
+                margin-left:10px;
+            }
+            h1{
+                color:white;
+                font-size: 30px;
+                margin-left:5px;
+            }
+            h3{
+                color:white;
+                font-size: 20px;
+                margin-top: -15px;
+                margin-left: 5px;
+            }
+            .alt{
+                height:100px;
+                width:100px;
+            }
+            button a{
+                padding: 10px;
+                background-color: green;
+                color:white;
+                border-radius: 10px;
+                font-size: 20px;
+                text-decoration: none;
+                
+            }
+            button{
+                margin-top: 0px;
+                margin-left: 115px;
+            }
+            #add1{
+                margin-left:0px;
+                font-size: 15px;
+            }
+            #add2{
+                font-size: 15px;
+            }
+            span{
+                color:white;
+            }
+            #div3{
+                margin-top: 30px;
+                
+            }
+            #img2{
+                margin-top: -30px;
+                height: 150px;
+                width: 180px;
+                margin-left: 10px;
+                border-radius: 10px;
+            }
+            .btn{
+            font-size: 20px;
+            margin-left: 135px;
+            background: lime;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        {% include "homenav.html" %}
+<img src="/static/logo.jpg" class="img2">
+        <div id="div1">
+            <div id="div2">
+             <a href="/maincourse"><img id=img1 src="/static/arrow.jpg"></a>
+        </div>
+        <div><h1>Your Order</h1>
+        <h3>from Khandesh Katta</h3><br>
+        <img id=img2 src="/static/kaju.jpg">
+        <div id="div3">
+        <h3>Item-Name:Kaju</h3>
+        <h3>Item Sub Total:₹330</h3>
+        <h3>Taxes and Charges:₹30</h3>
+        <h3>Convenience Fee:₹20</h3>
+        <h3 ><b>To Pay   :₹380</b></h3>
+        </div>
+        <button type="submit" class="btn" onclick="show()" name="cancel">Proceed</button>
+        </div>
+        <script>
+        function show(){
+            alert("Add to cart Successfully..!");
+            window.location.href="/order";
+        }
+        </script>
+    </body>
+</html>
